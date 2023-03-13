@@ -6,12 +6,13 @@
 
 body {
   font-family: "Blinker", sans-serif;
+  min-height: 100vw;
 }
 
 /*-------Navigation-------*/
 
 .navigation{
-  width: min(250px, 30%);
+  width: 30%;
   height: 100%;
   position: fixed;
   z-index: 1;
@@ -70,9 +71,10 @@ main {
   top: 0;
   left: 30%;
   width: 70%;
-  height: 100%;
+  margin-right: 0px;
   padding: 35px;
   padding-left: 50px;
+  overflow-x: hidden;
 }
 
 main header{
@@ -119,6 +121,10 @@ li {
   scrollbar-width: none;
 }
 
+a{
+  color: #61DAFB;
+}
+
 .box-pre::-webkit-scrollbar {
     display: none;
 }
@@ -128,20 +134,21 @@ li {
 footer {
   position: relative;
   bottom: 0;
-  width: 100%;
+  width: 70%;
+  left: 30%;
   text-align: center;
   font-size: 13px;
   margin-top: 200px;
-  background-color: #b3b3b3;
+  background-color: #788496;
   padding: 10px 0;
-  
 }
 
 footer a {
   text-decoration: none;
-  color: #f0e6db;
+  color: #61DAFB;
+
 }
 
 footer a:hover {
-  color: #61DAFB;
+  color: #006885;
 }
