@@ -11,15 +11,15 @@ body {
 
 /*-------Navigation-------*/
 
-.navigation{
+.navigation {
   width: 30%;
   height: 100%;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #282C34;
-  box-shadow: 0px 0px 15px #282C34;
+  background-color: #282c34;
+  box-shadow: 0px 0px 15px #282c34;
   overflow-y: auto;
 }
 
@@ -33,13 +33,13 @@ body {
 }
 
 .navigation a:hover {
-  color: #282C34;
-  background-color: #61DAFB;
+  color: #282c34;
+  background-color: #61dafb;
   cursor: pointer;
 }
 
-.navigation header{
-  color: #61DAFB;
+.navigation header {
+  color: #61dafb;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -48,7 +48,7 @@ body {
   margin-top: -5px;
 }
 
-.image{
+.image {
   width: 100%;
   max-width: 180px;
   height: auto;
@@ -57,11 +57,11 @@ body {
   object-fit: cover;
 }
 
-.image img{
+.image img {
   width: 100%;
 }
 
-.image header{
+.image header {
   padding-top: 15px;
 }
 
@@ -78,14 +78,14 @@ main {
   overflow-x: hidden;
 }
 
-main header{
+main header {
   font-size: 25px;
   margin-top: 25px;
   padding-top: 20px;
   border-top: 1.5px solid grey;
 }
 
-.first_header{
+.first_header {
   border: unset;
   padding-top: 0px;
 }
@@ -109,7 +109,7 @@ li {
   line-height: 1.8;
 }
 
-.box-pre{
+.box-pre {
   border-radius: 6px;
   margin-bottom: 20px;
   overflow: hidden;
@@ -122,12 +122,12 @@ li {
   scrollbar-width: none;
 }
 
-a{
-  color: #61DAFB;
+a {
+  color: #61dafb;
 }
 
 .box-pre::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 /*-------Footer-------*/
@@ -146,43 +146,43 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: #61DAFB;
-
+  color: #61dafb;
 }
 
 footer a:hover {
   color: #006885;
 }
 
-
 /* Media queries for smaller devices */
 
-@media screen and (max-width: 650px) {
-
+@media screen and (max-width: 700px) {
   .navigation {
     display: flex;
     flex-direction: column;
     overflow: hidden;
     top: 0;
     width: 100%;
-    height: 260px;
-    box-shadow: 0px 0px 15px #282C34;
+    height: 250px;
   }
 
-  .image header{
+  .main_section {
+    scroll-margin-top: 200px;
+  }
+
+  .image header {
     padding-top: 15px;
     margin-bottom: 10px;
   }
 
-  .image{
+  .image {
     height: 130px;
     overflow: clip;
   }
 
-  .nav{
+  .nav {
     overflow: auto;
   }
-  
+
   main {
     position: relative;
     top: 250px;
@@ -202,7 +202,7 @@ footer a:hover {
 
   ul,
   ol {
-    margin: 25px 25px 25px 0;
+    margin: 25px 25px 25px 0px;
     padding-left: 30px;
     font-size: 15px;
   }
@@ -210,5 +210,51 @@ footer a:hover {
   footer {
     left: 0;
     width: 100%;
+    bottom: -20px;
+    posiition: absolute;
+  }
+
+  .navigation a {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navigation a {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+
+  .main_section {
+    scroll-margin-top: 180px;
+  }
+
+  .navigation {
+    height: 220px;
+  }
+
+  main {
+    position: relative;
+    top: 220px;
+    left: 0;
+    width: 100%;
+    padding: 0 30px 20px 30px;
+  }
+
+  .image {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+  }
+
+  .image img {
+    height: 40px;
+    width: auto;
+    margin: auto;
+  }
+
+  .navigation header {
+    font-size: 15px;
   }
 }
