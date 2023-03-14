@@ -1,94 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="React Technical Documentation Page" />
-    <title>Technical Documentation Page</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  </head>
 
-  <body>
-    <div id="navbar" class="navigation">
-      <div class="image">
-        <img alt="react logo" src="https://imgur.com/ozCm0yE.png"/>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="React Technical Documentation Page" />
+  <title>Technical Documentation Page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+
+<body>
+  <div id="navbar" class="navigation">
+    <div class="image">
+      <img alt="react logo" src="https://imgur.com/ozCm0yE.png" />
       <header>Documentation</header>
-      </div>
-      <div class="nav">
-        <nav class="navbar-links" id="topbar">
-          <a href="#introduction" class="nav-link">Introduction</a>
-          <a href="#prerequisite" class="nav-link">What you should already know</a>
-          <a href="#jsx" class="nav-link">JSX</a>
-          <a href="#rendering_elements" class="nav-link">Rendering Elements</a>
-          <a href="#components" class="nav-link">Components</a>
-          <a href="#props" class="nav-link">Props</a>
-          <a href="#state" class="nav-link">State</a>
-          <a href="#conditionals" class="nav-link">Conditionals</a>
-          <a href="#lists" class="nav-link">Lists</a>
-          <a href="#reference" class="nav-link">Reference</a>
-        </nav>
-      </div>		
     </div>
-    	
-    <main id="main-doc">
-      <section class="main section" id="introduction">
-        <header class="first_header">Introduction</header>
-        <div class="content">
-				<p><strong>ReactJS</strong> is an open source highly used <strong>JavaScript library</strong>. <br>It helps in creating impressive web apps that require minimal effort and coding. The main objective of ReactJS is to develop User Interfaces (UI) that improves the speed of the apps.<br>One important thing to know is that all its is accessed via JavaScript, so having a strong grasp of JavaScript is essential for understanding, structuring, and debugging your code.</p>
-				<p>Some of the key points which supports the answer for why to use React:</p>
-				<ul>
-					<li>It is easy to learn and use. React comes with a good supply of documentation, tutorials, and training resources.</li>
-          <li>It is incredibly popular, which is to say it has a large community of users and a healthy amount of contributors who participate as developers.</li>
-					<li>It allows to create cross-platform products. </li>
-					<li>Its reusable components let the developers create small pieces of UI and include them in any place of the application.</li>
-          <li>It makes creating dynamic web applications easier and faster.</li>
-				</ul>
-			</div>
-      </section>
-      
-      <section class="main section" id="prerequisite">
-        <header>What you should already know</header>
-        <div class="content">
-				<p>Before you start learning ReactJS, you should have knowledge of HTML, CSS and JavaScript. There are few others skill sets that will help you to understand this guide:</p>
-				<ul>
-					<li><strong>JSX (Javascript XML) & Babel</strong> - in React you will work with JSX that looks like HTML and you can consider it like HTML-flavored JavaScript. It is the easiest way to add HTML code inside javascript or you can say it is the extension of the Javascript language syntax. It is faster than normal JavaScript as it performs optimizations while translating to regular JavaScript. It makes it easier for us to create templates. <br>Another thing you should know about is Babel. Babel is a compiler that transforms HTML-like text found in JavaScript files into standard JavaScript objects.</li>
-          <br/>
-					<li><strong>Package Manager (Node + Npm)</strong> - when you will be working with ReactJS you’ll have to install many, smaller software packages. NPM (Node package manager) plays a role and helps you to install and keep track of javascript software. You can use NodeJs or Yarn to manage these software packages. You can install NPM by installing Node.js. When you install Node.js, NPM will install automatically.</li>
-          <br/>
-          <li><strong>Git and CLI (Command Line Interface)</strong> - Git (version control) is another must-have skill a developer should have to store their project on GitHub, Bitbucket, and GitLab (Code hosting platform). It helps developers to work and collaborate with each other and it allows them to track and host different versions of project files. <br>Everything in React you will be doing with the help of CLI (Command-line interface). Installing packages, using NPM, creating a react app, running react application, and a lot of things so you really need to make a habit of using CLI.</li>
-				</ul>
-			</div>
-      </section>
+    <div class="nav">
+      <nav class="navbar-links" id="topbar">
+        <a href="#introduction" class="nav-link">Introduction</a>
+        <a href="#prerequisite" class="nav-link">What you should already know</a>
+        <a href="#jsx" class="nav-link">JSX</a>
+        <a href="#rendering_elements" class="nav-link">Rendering Elements</a>
+        <a href="#components" class="nav-link">Components</a>
+        <a href="#props" class="nav-link">Props</a>
+        <a href="#state" class="nav-link">State</a>
+        <a href="#conditionals" class="nav-link">Conditionals</a>
+        <a href="#lists" class="nav-link">Lists</a>
+        <a href="#reference" class="nav-link">Reference</a>
+      </nav>
+    </div>
+  </div>
 
-      <section class="main section" id="jsx">
-        <header>JSX</header>
-        <div class="content">
-          <p>Instead of using regular JavaScript, React code should be written in JSX. <br>Let us see a sample JSX code:</p>
-          <div class="box-pre">
-            <pre><code>const ele = &lt;h1&gt;This is sample JSX&lt;/h1&gt;;</code></pre>
-          </div>
-          <p>The above code snippet somewhat looks like HTML and it also uses a JavaScript-like variable but is neither HTML nor JavaScript, it is JSX. JSX is basically a syntax extension of regular JavaScript and is used to create React elements. These elements are then rendered to the React DOM.<p>
-          <p><strong>Using JavaScript expressions in JSX:</strong> In React we are allowed to use normal JavaScript expressions with JSX. To embed any JavaScript expression in a piece of code written in JSX we will have to wrap that expression in curly braces {}.</p>
-          <p><strong>Attributes in JSX:</strong> JSX allows us to use attributes with the HTML elements just like we do with normal HTML. But instead of the normal naming convention of HTML, JSX uses camelcase convention for attributes. For example, class in HTML becomes className in JSX.</p>
-          <p><strong>Specifying attribute values:</strong> JSX allows us to specify attribute values in two ways:
-            <ol>
-              <li><p><strong>As for string literals:</strong> We can specify the values of attributes as hard-coded strings using quotes:</p>
-                <div class="box-pre">
-                <pre><code>const ele = &lt;h1&gt; className = "firstAttribute">Hello!&lt;/h1&gt;;</code></pre>
-                </div>
-              </li>
-              <li><p><strong>As expressions:</strong> We can specify attributes as expressions using curly braces {}: </p>
-                <div class="box-pre">
-                <pre><code>const ele = &lt;h1&gt; className = {varName}>Hello!&lt;/h1&gt;;</code></pre>
-                </div>
-              </li>
-            </ol>
-          </p> 
-          <p><strong>Wrapping elements or Children in JSX:</strong> Consider a situation where you want to render multiple tags at a time. To do this we need to wrap all of this tag under a parent tag and then render this parent element to the HTML. All the subtags are called child tags or children of this parent element. 
-Notice in the below example how we have wrapped h1, h2, and h3 tags under a single div element and rendered them to HTML: <p>
-          <div class="box-pre">
-            <pre><code class="language-*javascript">import React from 'react';
+  <main id="main-doc">
+    <section class="main_section" id="introduction">
+      <header class="first_header">Introduction</header>
+      <div class="content">
+        <p><strong>ReactJS</strong> is an open source highly used <strong>JavaScript library</strong>. <br>It helps in creating impressive web apps that require minimal effort and coding. The main objective of ReactJS is to develop User Interfaces (UI) that improves the speed of the apps.<br>One important thing to know is that all its is accessed via JavaScript, so having a strong grasp of JavaScript is essential for understanding, structuring, and debugging your code.</p>
+        <p>Some of the key points which supports the answer for why to use React:</p>
+        <ul>
+          <li>It is easy to learn and use. React comes with a good supply of documentation, tutorials, and training resources.</li>
+          <li>It is incredibly popular, which is to say it has a large community of users and a healthy amount of contributors who participate as developers.</li>
+          <li>It allows to create cross-platform products. </li>
+          <li>Its reusable components let the developers create small pieces of UI and include them in any place of the application.</li>
+          <li>It makes creating dynamic web applications easier and faster.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="main_section" id="prerequisite">
+      <header>What you should already know</header>
+      <div class="content">
+        <p>Before you start learning ReactJS, you should have knowledge of HTML, CSS and JavaScript. There are few others skill sets that will help you to understand this guide:</p>
+        <ul>
+          <li><strong>JSX (Javascript XML) & Babel</strong> - in React you will work with JSX that looks like HTML and you can consider it like HTML-flavored JavaScript. It is the easiest way to add HTML code inside javascript or you can say it is the extension of the Javascript language syntax. It is faster than normal JavaScript as it performs optimizations while translating to regular JavaScript. It makes it easier for us to create templates. <br>Another thing you should know about is Babel. Babel is a compiler that transforms HTML-like text found in JavaScript files into standard JavaScript objects.</li>
+          <br />
+          <li><strong>Package Manager (Node + Npm)</strong> - when you will be working with ReactJS you’ll have to install many, smaller software packages. NPM (Node package manager) plays a role and helps you to install and keep track of javascript software. You can use NodeJs or Yarn to manage these software packages. You can install NPM by installing Node.js. When you install Node.js, NPM will install automatically.</li>
+          <br />
+          <li><strong>Git and CLI (Command Line Interface)</strong> - Git (version control) is another must-have skill a developer should have to store their project on GitHub, Bitbucket, and GitLab (Code hosting platform). It helps developers to work and collaborate with each other and it allows them to track and host different versions of project files. <br>Everything in React you will be doing with the help of CLI (Command-line interface). Installing packages, using NPM, creating a react app, running react application, and a lot of things so you really need to make a habit of using CLI.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="main_section" id="jsx">
+      <header>JSX</header>
+      <div class="content">
+        <p>Instead of using regular JavaScript, React code should be written in JSX. <br>Let us see a sample JSX code:</p>
+        <div class="box-pre">
+          <pre><code>const ele = &lt;h1&gt;This is sample JSX&lt;/h1&gt;;</code></pre>
+        </div>
+        <p>The above code snippet somewhat looks like HTML and it also uses a JavaScript-like variable but is neither HTML nor JavaScript, it is JSX. JSX is basically a syntax extension of regular JavaScript and is used to create React elements. These elements are then rendered to the React DOM.
+        <p>
+        <p><strong>Using JavaScript expressions in JSX:</strong> In React we are allowed to use normal JavaScript expressions with JSX. To embed any JavaScript expression in a piece of code written in JSX we will have to wrap that expression in curly braces {}.</p>
+        <p><strong>Attributes in JSX:</strong> JSX allows us to use attributes with the HTML elements just like we do with normal HTML. But instead of the normal naming convention of HTML, JSX uses camelcase convention for attributes. For example, class in HTML becomes className in JSX.</p>
+        <p><strong>Specifying attribute values:</strong> JSX allows us to specify attribute values in two ways:
+        <ol>
+          <li>
+            <p><strong>As for string literals:</strong> We can specify the values of attributes as hard-coded strings using quotes:</p>
+            <div class="box-pre">
+              <pre><code>const ele = &lt;h1&gt; className = "firstAttribute">Hello!&lt;/h1&gt;;</code></pre>
+            </div>
+          </li>
+          <li>
+            <p><strong>As expressions:</strong> We can specify attributes as expressions using curly braces {}: </p>
+            <div class="box-pre">
+              <pre><code>const ele = &lt;h1&gt; className = {varName}>Hello!&lt;/h1&gt;;</code></pre>
+            </div>
+          </li>
+        </ol>
+        </p>
+        <p><strong>Wrapping elements or Children in JSX:</strong> Consider a situation where you want to render multiple tags at a time. To do this we need to wrap all of this tag under a parent tag and then render this parent element to the HTML. All the subtags are called child tags or children of this parent element.
+          Notice in the below example how we have wrapped h1, h2, and h3 tags under a single div element and rendered them to HTML:
+        <p>
+        <div class="box-pre">
+          <pre><code class="language-*javascript">import React from 'react';
 import ReactDOM from 'react-dom';
  
  
@@ -100,113 +105,115 @@ const element = &lt;div&gt;
 ReactDOM.render(
     element,
     document.getElementById("root"));</code></pre>
-          </div>
-          <p><strong>Comments in JSX:</strong> JSX allows us to use comments as it allows us to use JavaScript expressions. Comments in JSX begins with /* and ends with */. We can add comments in JSX by wrapping them in curly braces {} just like we did in the case of expressions. Below example:</p>
-          <div class="box-pre">
-            <pre><code>{/ * This is a comment in JSX * /}</code></pre>
-          </div>
         </div>
-      </section>
-      
-      <section class="main section" id="rendering_elements">
-        <header>Rendering Elements</header>
-        <div class="content">
-          <p>React elements are different from DOM elements as React elements are simple javascript objects and are efficient to create. React elements are the building blocks of any React app and should not be confused with React components which will be discussed later</p>
-          <br/>
-          <p><strong>Rendering an Element in React</strong><br/>In order to render any element into the Browser DOM, we need to have a container or root DOM element. It is almost a convention to have a div element with the id=”root” or id=”app” to be used as the root DOM element.</p>
-          <div class="box-pre">
-            <pre><code>&lt;div id="root"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <p>Now, in order to render a simple React Element to the root node, we must write the following:</p>
-          <div class="box-pre">
-            <pre><code>import React,{ Component }  from 'react';<br/><br/>class App extends Component {<br/><br/>  render() {<br/>    return (<br/>      &lt;div&gt;<br/>        &lt;h1&gt;Hello React!&lt;/h1&gt;<br/>      &lt;/div&gt;<br/>    );<br/>  }<br/>}<br/><br/>export default App;</pre></code>
-          </div>
-          <p>Now, we created React Element and also have rendered in place, but React was not developed to create static pages, the intention of using React is to create a more logical and active webpage. In order to do so, the elements will need to be updated.</p>
-          <br/>
-          <p><strong>Updating an Element in React</strong><br/>React Elements are immutable i.e. once an element is created it is impossible to update its children or attribute. Thus, in order to update an element, we must use the render() method several times to update the value over time. Let’s see this in an example.</p>
-          <div class="box-pre">
-            <pre><code>import React from 'react';<br/>import ReactDOM from 'react-dom';<br/><br/>function showTime()<br/>{<br/>const myElement = (<br/>                   &lt;div&gt;
+        <p><strong>Comments in JSX:</strong> JSX allows us to use comments as it allows us to use JavaScript expressions. Comments in JSX begins with /* and ends with */. We can add comments in JSX by wrapping them in curly braces {} just like we did in the case of expressions. Below example:</p>
+        <div class="box-pre">
+          <pre><code>{/ * This is a comment in JSX * /}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="main_section" id="rendering_elements">
+      <header>Rendering Elements</header>
+      <div class="content">
+        <p>React elements are different from DOM elements as React elements are simple javascript objects and are efficient to create. React elements are the building blocks of any React app and should not be confused with React components which will be discussed later</p>
+        <br />
+        <p><strong>Rendering an Element in React</strong><br />In order to render any element into the Browser DOM, we need to have a container or root DOM element. It is almost a convention to have a div element with the id=”root” or id=”app” to be used as the root DOM element.</p>
+        <div class="box-pre">
+          <pre><code>&lt;div id="root"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <p>Now, in order to render a simple React Element to the root node, we must write the following:</p>
+        <div class="box-pre">
+          <pre><code>import React,{ Component }  from 'react';<br/><br/>class App extends Component {<br/><br/>  render() {<br/>    return (<br/>      &lt;div&gt;<br/>        &lt;h1&gt;Hello React!&lt;/h1&gt;<br/>      &lt;/div&gt;<br/>    );<br/>  }<br/>}<br/><br/>export default App;</pre></code>
+        </div>
+        <p>Now, we created React Element and also have rendered in place, but React was not developed to create static pages, the intention of using React is to create a more logical and active webpage. In order to do so, the elements will need to be updated.</p>
+        <br />
+        <p><strong>Updating an Element in React</strong><br />React Elements are immutable i.e. once an element is created it is impossible to update its children or attribute. Thus, in order to update an element, we must use the render() method several times to update the value over time. Let’s see this in an example.</p>
+        <div class="box-pre">
+          <pre><code>import React from 'react';<br/>import ReactDOM from 'react-dom';<br/><br/>function showTime()<br/>{<br/>const myElement = (<br/>                   &lt;div&gt;
                         &lt;h1&gt;Welcome to React!&lt;/h1&gt;
                         &lt;h2&gt;{new Date().toLocaleTimeString()}&lt;/h2&gt;<br/>                   &lt;/div&gt;<br/>                  );<br/><br/>ReactDOM.render(
       myElement,
       document.getElementById("root")<br/>);<br/>}<br/><br/>setInterval(showTime, 1000);</pre></code>
-          </div>
-          <br/>
-          <p><strong>React Render Efficiency</strong><br/>React is chosen over the legacy of DOM update because of its increased efficiency. React achieves this efficiency by using the virtual DOM and efficient differentiating algorithm. In the example of displaying the current time, at each second we call the render method, and the virtual DOM gets updated and then the differentiator checks for the particular differences in Browser DOM and the Virtual DOM and then updates only what is required such as in the given example the time is the only thing that is getting changed each time not the title “Welcome to React!” thus React only updates the time itself making it much more efficient than conventional DOM manipulation.</p>
-          <br/>
-          <p><strong>Important Points to Note:</strong></p>
-          <ul>
-            <li>Calling the render() method multiple times may serve our purpose for this example, but in general, it is never used instead a stateful component is used.</li>
-            <br/>
-            <li>A React Element is almost never used isolated, we can use elements as the building blocks of creating a component in React.</li>
-          </ul>
         </div>
-      </section>
+        <br />
+        <p><strong>React Render Efficiency</strong><br />React is chosen over the legacy of DOM update because of its increased efficiency. React achieves this efficiency by using the virtual DOM and efficient differentiating algorithm. In the example of displaying the current time, at each second we call the render method, and the virtual DOM gets updated and then the differentiator checks for the particular differences in Browser DOM and the Virtual DOM and then updates only what is required such as in the given example the time is the only thing that is getting changed each time not the title “Welcome to React!” thus React only updates the time itself making it much more efficient than conventional DOM manipulation.</p>
+        <br />
+        <p><strong>Important Points to Note:</strong></p>
+        <ul>
+          <li>Calling the render() method multiple times may serve our purpose for this example, but in general, it is never used instead a stateful component is used.</li>
+          <br />
+          <li>A React Element is almost never used isolated, we can use elements as the building blocks of creating a component in React.</li>
+        </ul>
+      </div>
+    </section>
 
-      <section class="main section" id="components">
-        <header>Components</header>
-        <div class="content">
-          <p>A <strong>Component</strong> is one of the core building blocks of React. In other words, we can say that every application you will develop in React will be made up of pieces called components. Components make the task of building UIs much easier. You can see a UI broken down into multiple individual pieces called components and work on them independently and merge them all in a parent component which will be your final UI.</p>
-          <p>Components in React basically return a piece of JSX code that tells what should be rendered on the screen. In React, we mainly have two types of components:</p>
-          <ol>
-            <li><strong>Functional Components:</strong> Functional components are simply javascript functions. We can create a functional component in React by writing a javascript function. These functions may or may not receive data as parameters. Below example shows a valid functional component in React:</li>
-            <div class="box-pre">
-              <pre><code>const Democomponent=()=><br/>{<br/>  return &lt;h1&gt;Welcome Message!&lt;/h1&gt;;<br/>}</pre></code>
-            </div>
-            <li><strong>Class Components:</strong> The class components are a little more complex than the functional components. The functional components are not aware of the other components in your program whereas the class components can work with each other. We can pass data from one class component to other class components. We can use JavaScript ES6 classes to create class-based components in React. Below example shows a valid class-based component in React:</li>
-            <div class="box-pre">
-              <pre><code>class Democomponent extends React.Component<br/>{<br/>  render(){
-          return &lt;h1&gtWelcome Message!&lt;/h1&gt;<br/>  }<br/>}</pre></code>
-            </div>
-          </ol>
-          <br/>
-          <p><strong>Rendering components</strong><br/>In our previous section on rendering elements in React we have seen how elements initialized with DOM tags are rendered using ReactDOM.render() method. React is also capable of rendering user-defined components. To render a component in React we can initialize an element with a user-defined component and pass this element as the first parameter to ReactDOM.render() or directly pass the component as the first argument to the ReactDOM.render() method. 
-Below syntax shows how to initialize a component to an element:</p>
+    <section class="main_section" id="components">
+      <header>Components</header>
+      <div class="content">
+        <p>A <strong>Component</strong> is one of the core building blocks of React. In other words, we can say that every application you will develop in React will be made up of pieces called components. Components make the task of building UIs much easier. You can see a UI broken down into multiple individual pieces called components and work on them independently and merge them all in a parent component which will be your final UI.</p>
+        <p>Components in React basically return a piece of JSX code that tells what should be rendered on the screen. In React, we mainly have two types of components:</p>
+        <ol>
+          <li><strong>Functional Components:</strong> Functional components are simply javascript functions. We can create a functional component in React by writing a javascript function. These functions may or may not receive data as parameters. Below example shows a valid functional component in React:</li>
           <div class="box-pre">
-              <pre><code>const elementName = &lt;ComponentName/&gt;;</pre></code>
+            <pre><code>const Democomponent=()=><br/>{<br/>  return &lt;h1&gt;Welcome Message!&lt;/h1&gt;;<br/>}</pre></code>
           </div>
-          <p>In the above syntax, the ComponentName is the name of the user-defined component.<br/><strong>Note:</strong> The name of a component should always start with a capital letter. This is done to differentiate a component tag with html tags.<p>
-          <p>Below example renders a component named Welcome to the screen:<p>
+          <li><strong>Class Components:</strong> The class components are a little more complex than the functional components. The functional components are not aware of the other components in your program whereas the class components can work with each other. We can pass data from one class component to other class components. We can use JavaScript ES6 classes to create class-based components in React. Below example shows a valid class-based component in React:</li>
           <div class="box-pre">
-              <pre><code>import React from 'react';<br/>import ReactDOM from 'react-dom';<br/><br/>// This is a functional component<br/>const Welcome=()=><br/>{ 
+            <pre><code>class Democomponent extends React.Component<br/>{<br/>  render(){
+          return &lt;h1&gtWelcome Message!&lt;/h1&gt;<br/>  }<br/>}</pre></code>
+          </div>
+        </ol>
+        <br />
+        <p><strong>Rendering components</strong><br />In our previous section on rendering elements in React we have seen how elements initialized with DOM tags are rendered using ReactDOM.render() method. React is also capable of rendering user-defined components. To render a component in React we can initialize an element with a user-defined component and pass this element as the first parameter to ReactDOM.render() or directly pass the component as the first argument to the ReactDOM.render() method.
+          Below syntax shows how to initialize a component to an element:</p>
+        <div class="box-pre">
+          <pre><code>const elementName = &lt;ComponentName/&gt;;</pre></code>
+        </div>
+        <p>In the above syntax, the ComponentName is the name of the user-defined component.<br /><strong>Note:</strong> The name of a component should always start with a capital letter. This is done to differentiate a component tag with html tags.
+        <p>
+        <p>Below example renders a component named Welcome to the screen:
+        <p>
+        <div class="box-pre">
+          <pre><code>import React from 'react';<br/>import ReactDOM from 'react-dom';<br/><br/>// This is a functional component<br/>const Welcome=()=><br/>{ 
         return &lt;h1&gt;Hello World!&lt;/h1&gt;<br/>}<br/><br/>ReactDOM.render( 
     &lt;Welcome /&gt;, 
     document.getElementById("root")<br/>);</pre></code>
-          </div>
-          <p>In above example ReactDOM efficiently updates the DOM to match with the returned element and renders that element to the DOM element with id as “root”.</p>
-          <br/>
-          <p><strong>Composing Components</strong><br/>We can merge individual components to make a parent component:</p>
-          <div class="box-pre">
-              <pre><code>const App=()=><br/>{
+        </div>
+        <p>In above example ReactDOM efficiently updates the DOM to match with the returned element and renders that element to the DOM element with id as “root”.</p>
+        <br />
+        <p><strong>Composing Components</strong><br />We can merge individual components to make a parent component:</p>
+        <div class="box-pre">
+          <pre><code>const App=()=><br/>{
     return(
             &lt;div&gt;
                 &lt;Navbar /&gt;
                 &lt;Sidebar /&gt;
                 &lt;ArticleList &gt;
             &lt;/div&gt;<br/>    );<br/>}</pre></code>
-          </div>
-          <p>We merged individual components named <i>Navbar</i>, <i>Sidebar</i>, <i>ArticleList</i> and created parent component named <i>App</i>.
         </div>
-      </section>
+        <p>We merged individual components named <i>Navbar</i>, <i>Sidebar</i>, <i>ArticleList</i> and created parent component named <i>App</i>.
+      </div>
+    </section>
 
-      <section class="main section" id="props">
-        <header>Props</header>
-        <div class="content">
-          <p>React <strong>Props</strong> (stand for properties) are like function arguments in JavaScript and attributes in HTML. They allow us to pass information to a Component. Props are objects which can be used inside a component.</p>
-          <br/>
-          <p><strong>Passing and Accessing props</strong> <br>We can pass props to any component as we declare attributes for any HTML tag. Have a look at the below code snippet:</p>
-          <div class="box-pre">
-              <pre><code>&lt;DemoComponent sampleProp = "HelloProp" /&gt;</pre></code>
-          </div>
-          <p>We are passing a prop named sampleProp to the component named DemoComponent. This prop has the value “HelloProp”. Let us now see how can we access these props. 
-We can access any props inside from the component’s class to which the props is passed. The props can be accessed as shown below:</p>
-          <div class="box-pre">
-              <pre><code>this.props.propName;</pre></code>
-          </div>
-          <p>We can access any prop from inside a component’s class using the above syntax. The ‘this.props’ is a kind of global object which stores all of a components props. The propName, that is the names of props are keys of this object.
-Below is a sample program to illustrate how to pass and access props from a component: </p>
-          <div class="box-pre">
-              <pre><code>import React from 'react';
+    <section class="main_section" id="props">
+      <header>Props</header>
+      <div class="content">
+        <p>React <strong>Props</strong> (stand for properties) are like function arguments in JavaScript and attributes in HTML. They allow us to pass information to a Component. Props are objects which can be used inside a component.</p>
+        <br />
+        <p><strong>Passing and Accessing props</strong> <br>We can pass props to any component as we declare attributes for any HTML tag. Have a look at the below code snippet:</p>
+        <div class="box-pre">
+          <pre><code>&lt;DemoComponent sampleProp = "HelloProp" /&gt;</pre></code>
+        </div>
+        <p>We are passing a prop named sampleProp to the component named DemoComponent. This prop has the value “HelloProp”. Let us now see how can we access these props.
+          We can access any props inside from the component’s class to which the props is passed. The props can be accessed as shown below:</p>
+        <div class="box-pre">
+          <pre><code>this.props.propName;</pre></code>
+        </div>
+        <p>We can access any prop from inside a component’s class using the above syntax. The ‘this.props’ is a kind of global object which stores all of a components props. The propName, that is the names of props are keys of this object.
+          Below is a sample program to illustrate how to pass and access props from a component: </p>
+        <div class="box-pre">
+          <pre><code>import React from 'react';
 import ReactDOM from 'react-dom';
  
 // sample component to illustrate props
@@ -219,12 +226,12 @@ class DemoComponent extends React.Component{<br/>    render(){
     // passing props
     &lt;DemoComponent user = "Harsh Agarwal" /&gt;,
     document.getElementById("root")<br/>);</pre></code>
-          </div>
-          <p>In the above example, we have used a class-based component to illustrate props. But we can <strong>pass props to a function-based component</strong> also just like we did in the above example. But to access a prop from a function we do <strong>not need to use the ‘this’</strong> keyword anymore.</p>
-          <br/>
-          <p><strong>Passing information from one component to other</strong> <br>This is one of the coolest features of React. We can make components to interact among themselves. We will pass some information as props from <i>Garage</i> component to the <i>Car</i> component. We can pass as many props as we want to a component.</p>
-          <div class="box-pre">
-              <pre><code>function Car(props) {
+        </div>
+        <p>In the above example, we have used a class-based component to illustrate props. But we can <strong>pass props to a function-based component</strong> also just like we did in the above example. But to access a prop from a function we do <strong>not need to use the ‘this’</strong> keyword anymore.</p>
+        <br />
+        <p><strong>Passing information from one component to other</strong> <br>This is one of the coolest features of React. We can make components to interact among themselves. We will pass some information as props from <i>Garage</i> component to the <i>Car</i> component. We can pass as many props as we want to a component.</p>
+        <div class="box-pre">
+          <pre><code>function Car(props) {
   return &lt;h2&gtI am a { props.brand }!&lt;/h2&gt;
 }
 
@@ -240,37 +247,37 @@ function Garage() {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(&lt;Garage /&gt;);</pre></code>
-          </div>
-          <br/>
-          <p><strong>defaultProps</strong><br/>If we want to pass some default information using props to our component, React allows us to do so. <br/>The defaultProps is a method that we can use to store as much information as we want for a particular class. And this information can be accessed from anywhere inside that particular class. Every piece of information you add inside the defaultProps, will be added as the prop of that class. Example of creatinf defaultProps:</p>
-          <div class="box-pre">
-              <pre><code>// Creating default props for<br/>// ExampleClass Component<br/><br/>ExampleClass.defaultProps = {<br/>  title: "GeeksforGeeks"<br/>}</pre></code>
-          </div>
-          <br/>
-          <p><strong>Note:</strong> Props are read-only. We are not allowed to modify the content of a prop. Whatever the type of Component is – functional or class-based, none of them is allowed to modify their props.</p>
         </div>
-      </section>
+        <br />
+        <p><strong>defaultProps</strong><br />If we want to pass some default information using props to our component, React allows us to do so. <br />The defaultProps is a method that we can use to store as much information as we want for a particular class. And this information can be accessed from anywhere inside that particular class. Every piece of information you add inside the defaultProps, will be added as the prop of that class. Example of creatinf defaultProps:</p>
+        <div class="box-pre">
+          <pre><code>// Creating default props for<br/>// ExampleClass Component<br/><br/>ExampleClass.defaultProps = {<br/>  title: "GeeksforGeeks"<br/>}</pre></code>
+        </div>
+        <br />
+        <p><strong>Note:</strong> Props are read-only. We are not allowed to modify the content of a prop. Whatever the type of Component is – functional or class-based, none of them is allowed to modify their props.</p>
+      </div>
+    </section>
 
-      <section class="main section" id="state">
-        <header>State</header>
-        <div class="content">
-          <p>In the previous parts, we got to know that React Components can be broadly classified into Functional and Class Components. It is also seen that Functional Components are faster and much simpler than Class Components. The primary difference between the two is the availability of the State.<br><strong>The state</strong> is an instance of React Component Class and can be defined as an object of a set of observable properties that control the behavior of the component. In other words, the State of a component is an object that holds some information that may change over the lifetime of the component.</p>
+    <section class="main_section" id="state">
+      <header>State</header>
+      <div class="content">
+        <p>In the previous parts, we got to know that React Components can be broadly classified into Functional and Class Components. It is also seen that Functional Components are faster and much simpler than Class Components. The primary difference between the two is the availability of the State.<br><strong>The state</strong> is an instance of React Component Class and can be defined as an object of a set of observable properties that control the behavior of the component. In other words, the State of a component is an object that holds some information that may change over the lifetime of the component.</p>
+        </br>
+        <p><strong>Difference of Props and State</strong><br />We have already learned about Props and we got to know that Props are also objects that hold information to control the behavior of that particular component, sounds familiar to State indeed but props and states are nowhere near be same. Let us differentiate the two:</p>
+        <ul>
+          <li>Props are immutable i.e. once set the props cannot be changed, while State is an observable object that is to be used to hold data that may change over time and to control the behavior after each change.</li>
           </br>
-          <p><strong>Difference of Props and State</strong><br/>We have already learned about Props and we got to know that Props are also objects that hold information to control the behavior of that particular component, sounds familiar to State indeed but props and states are nowhere near be same. Let us differentiate the two:</p>
-          <ul>
-            <li>Props are immutable i.e. once set the props cannot be changed, while State is an observable object that is to be used to hold data that may change over time and to control the behavior after each change.</li>
-            </br>
-            <li>States can be used in Class Components, Functional components with the use of React Hooks (useState and other methods) while Props don’t have this limitation.</li>
-            </br>
-            <li>While Props are set by the parent component, State is generally updated by event handlers. For example, let us consider the toggle the theme of the GeeksforGeeks {IDE} page. It can be implemented using State where the probable values of the State can be either light or dark and upon selection, the IDE changes its color.</li>
-          </ul>
-          <br/>
-          <p><strong>Conventions of Using State in React</strong></p>
-          <ul>
-            <li>State of a component should prevail throughout the lifetime, thus we <strong>must first have some initial state</strong>, to do so we should define the State in the constructor of the component’s class. To define a state of any Class we can use the sample format below.</li>
-            </br>
-            <div class="box-pre">
-              <pre><code>Class MyClass extends React.Component
+          <li>States can be used in Class Components, Functional components with the use of React Hooks (useState and other methods) while Props don’t have this limitation.</li>
+          </br>
+          <li>While Props are set by the parent component, State is generally updated by event handlers. For example, let us consider the toggle the theme of the GeeksforGeeks {IDE} page. It can be implemented using State where the probable values of the State can be either light or dark and upon selection, the IDE changes its color.</li>
+        </ul>
+        <br />
+        <p><strong>Conventions of Using State in React</strong></p>
+        <ul>
+          <li>State of a component should prevail throughout the lifetime, thus we <strong>must first have some initial state</strong>, to do so we should define the State in the constructor of the component’s class. To define a state of any Class we can use the sample format below.</li>
+          </br>
+          <div class="box-pre">
+            <pre><code>Class MyClass extends React.Component
 {
     constructor(props)
     {
@@ -278,59 +285,59 @@ root.render(&lt;Garage /&gt;);</pre></code>
         this.state = { attribute : "value" };
     }
 }</pre></code>
-            </div>
-            <li><strong>State should never be updated explicitly.</strong> React uses an observable object as the state that observes what changes are made to the state and helps the component behave accordingly. For example, if we update the state of any component like the following the webpage will not re-render itself because React State will not be able to detect the changes made.</li>
-            <div class="box-pre">
-              <pre><code>this.state.attribute = "new-value";</pre></code>
-            </div>
-            <li>Thus, React provides its own method setState(). setState() method takes a single parameter and expects an object which should contain the set of values to be updated. Once the update is done the method implicitly calls the render() method to repaint the page. Hence, the correct method of updating the value of a state will be similar to the code below.</li>
-            <div class="box-pre">
-              <pre><code>this.setState({attribute: "new-value"});</pre></code>
-            </div>
-            <li>The only time we are allowed to define the state explicitly is in the constructor to provide the initial state. </li>
-            <li>React is highly efficient and thus uses asynchronous state updates i.e. React may update multiple setState() updates in a single go.</li>
-            <div class="box-pre">
-              <pre><code>this.setState((prevState, props) => ({
+          </div>
+          <li><strong>State should never be updated explicitly.</strong> React uses an observable object as the state that observes what changes are made to the state and helps the component behave accordingly. For example, if we update the state of any component like the following the webpage will not re-render itself because React State will not be able to detect the changes made.</li>
+          <div class="box-pre">
+            <pre><code>this.state.attribute = "new-value";</pre></code>
+          </div>
+          <li>Thus, React provides its own method setState(). setState() method takes a single parameter and expects an object which should contain the set of values to be updated. Once the update is done the method implicitly calls the render() method to repaint the page. Hence, the correct method of updating the value of a state will be similar to the code below.</li>
+          <div class="box-pre">
+            <pre><code>this.setState({attribute: "new-value"});</pre></code>
+          </div>
+          <li>The only time we are allowed to define the state explicitly is in the constructor to provide the initial state. </li>
+          <li>React is highly efficient and thus uses asynchronous state updates i.e. React may update multiple setState() updates in a single go.</li>
+          <div class="box-pre">
+            <pre><code>this.setState((prevState, props) => ({
   counter: prevState.count + props.diff
 }));</pre></code>
-            </div>
-            <li>The same can be written using the default functional way as follows:</li>
-            <div class="box-pre">
-              <pre><code>this.setState(function(prevState, props){
+          </div>
+          <li>The same can be written using the default functional way as follows:</li>
+          <div class="box-pre">
+            <pre><code>this.setState(function(prevState, props){
     return {counter: prevState.count + props.diff};
 });</pre></code>
-            </div>
-            <li><strong>State updates are independent.</strong> The state object of a component may contain multiple attributes and React allows to use setState() function to update only a subset of those attributes as well as using multiple setState() methods to update each attribute value independently. For example, let us take the following component state into account.</li>
-            <div class="box-pre">
-              <pre><code>this.state = {
+          </div>
+          <li><strong>State updates are independent.</strong> The state object of a component may contain multiple attributes and React allows to use setState() function to update only a subset of those attributes as well as using multiple setState() methods to update each attribute value independently. For example, let us take the following component state into account.</li>
+          <div class="box-pre">
+            <pre><code>this.state = {
 darkTheme: False,
 searchTerm: ''
 };</pre></code>
-            </div>
-            <li>The above definition has two attributes we can use a single setState() method to update both together, or we can use separate setState() methods to update the attributes independently. React internally merges setState() methods or updates only those attributes which are needed. </li>
-          </ul>
-        </div>
-      </section>
+          </div>
+          <li>The above definition has two attributes we can use a single setState() method to update both together, or we can use separate setState() methods to update the attributes independently. React internally merges setState() methods or updates only those attributes which are needed. </li>
+        </ul>
+      </div>
+    </section>
 
-      <section class="main section" id="conditionals">
-        <header>Conditionals</header>
-        <div class="content">
-          <p>There may arise a situation when we want to render something based on some condition and we can. This is what we call <strong>Conditional Rendering</strong> in ReactJS. That is to create multiple components and render them based on some conditions. This is also a kind of encapsulation supported by React.</p>
-          <br/>
-          <p><strong>if Statement</strong><br/>
-We can use the if JavaScript operator to decide which component to render.<br/>For example we'll use these two components:</p>
-          <div class="box-pre">
-              <pre><code>function MissedGoal() {
+    <section class="main_section" id="conditionals">
+      <header>Conditionals</header>
+      <div class="content">
+        <p>There may arise a situation when we want to render something based on some condition and we can. This is what we call <strong>Conditional Rendering</strong> in ReactJS. That is to create multiple components and render them based on some conditions. This is also a kind of encapsulation supported by React.</p>
+        <br />
+        <p><strong>if Statement</strong><br />
+          We can use the if JavaScript operator to decide which component to render.<br />For example we'll use these two components:</p>
+        <div class="box-pre">
+          <pre><code>function MissedGoal() {
   return &lt;h1&gt;MISSED!&lt;/h1&gt;;
 }
 
 function MadeGoal() {
   return &lt;h1&gt;GOAL!&lt;/h1&gt;;
 }</pre></code>
-          </div>
-          <p>Now, we'll create another component that chooses which component to render based on a condition:</p>
-          <div class="box-pre">
-              <pre><code>function Goal(props) {
+        </div>
+        <p>Now, we'll create another component that chooses which component to render based on a condition:</p>
+        <div class="box-pre">
+          <pre><code>function Goal(props) {
   const isGoal = props.isGoal;
   if (isGoal) {
     return &lt;MadeGoal/&gt;;
@@ -340,46 +347,46 @@ function MadeGoal() {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(&lt;Goal isGoal={false} /&gt;);</pre></code>
-          </div>
-          </br>
-          <p><strong>Logical && Operator</strong><br/>
-We can use the logical && operator along with some condition to decide what will appear in output based on whether the condition evaluates to true or false. Below is the syntax of using the logical && operator with conditions: </p>
-          <div class="box-pre">
-              <pre><code>{
+        </div>
+        </br>
+        <p><strong>Logical && Operator</strong><br />
+          We can use the logical && operator along with some condition to decide what will appear in output based on whether the condition evaluates to true or false. Below is the syntax of using the logical && operator with conditions: </p>
+        <div class="box-pre">
+          <pre><code>{
     condition &&
     
     // This section will contain
     // elements you want to return
     // that will be a part of output
 }</pre></code>
-          </div>
-          <p>If the condition provided in the above syntax evaluates to True then the elements right after the && operator will be a part of the output and if the condition evaluates to false then the code within the curly braces will not appear in the output. </p>
-          <br/>
-          <p><strong>Ternary Operator
-</strong><br/>Another way to conditionally render elements is by using a ternary operator. </p>
-          <div class="box-pre">
-              <pre><code>condition ? true : false</pre></code>
-          </div>
-          <p>Applying to previous example:</p>
-          <div class="box-pre">
-              <pre><code>return (
+        </div>
+        <p>If the condition provided in the above syntax evaluates to True then the elements right after the && operator will be a part of the output and if the condition evaluates to false then the code within the curly braces will not appear in the output. </p>
+        <br />
+        <p><strong>Ternary Operator
+          </strong><br />Another way to conditionally render elements is by using a ternary operator. </p>
+        <div class="box-pre">
+          <pre><code>condition ? true : false</pre></code>
+        </div>
+        <p>Applying to previous example:</p>
+        <div class="box-pre">
+          <pre><code>return (
     &lt;&gt;
       { isGoal ? &lt;MadeGoal/&gt; : &lt;MissedGoal/&gt; }
     &lt;/&gt;
   );</pre></code>
-          </div>
-          <br/>
-          <p><strong>Preventing Component from Rendering</strong><br/>It might happen sometimes that we may not want some components to render. To prevent a component from rendering we will have to return null as its rendering output.</p>
         </div>
-      </section>
+        <br />
+        <p><strong>Preventing Component from Rendering</strong><br />It might happen sometimes that we may not want some components to render. To prevent a component from rendering we will have to return null as its rendering output.</p>
+      </div>
+    </section>
 
-      <section class="main section" id="lists">
-        <header>Lists</header>
-        <div class="content">
-          <p><strong>Lists</strong> are very useful when it comes to developing the UI of any website. Lists are mainly used for displaying menus in a website, for example, the navbar menu. In regular JavaScript, we can use arrays for creating lists. We can create lists in React in a similar manner as we do in regular JavaScript. Let’s first see how we can traverse and update any list in regular JavaScript. We can use the <strong>map()</strong> function in JavaScript for traversing the lists.</p>
-          <p>Let us now create a list of elements in React. We will render the list numbers in the above code as an unordered list element in the browser rather than simply logging in to the console. To do this, we will traverse the list using the JavaScript map() function and updates elements to be enclosed between &lt;li&gt; &lt;/li&gt; elements. Finally we will wrap this new list within &lt;ul&gt; &lt;/ul&gt; elements and render it to the DOM.<br/>The below code illustrates this:</p> 
-           <div class="box-pre">
-              <pre><code>import React from 'react';
+    <section class="main_section" id="lists">
+      <header>Lists</header>
+      <div class="content">
+        <p><strong>Lists</strong> are very useful when it comes to developing the UI of any website. Lists are mainly used for displaying menus in a website, for example, the navbar menu. In regular JavaScript, we can use arrays for creating lists. We can create lists in React in a similar manner as we do in regular JavaScript. Let’s first see how we can traverse and update any list in regular JavaScript. We can use the <strong>map()</strong> function in JavaScript for traversing the lists.</p>
+        <p>Let us now create a list of elements in React. We will render the list numbers in the above code as an unordered list element in the browser rather than simply logging in to the console. To do this, we will traverse the list using the JavaScript map() function and updates elements to be enclosed between &lt;li&gt; &lt;/li&gt; elements. Finally we will wrap this new list within &lt;ul&gt; &lt;/ul&gt; elements and render it to the DOM.<br />The below code illustrates this:</p>
+        <div class="box-pre">
+          <pre><code>import React from 'react';
 import ReactDOM from 'react-dom';
   
 const numbers = [1,2,3,4,5];
@@ -394,10 +401,10 @@ ReactDOM.render(
     &lt;/ul&gt;, 
     document.getElementById('root')
 );</pre></code>
-          </div>
-          <p>The above code will render an unordered list.<br/>We had directly rendered the list to the DOM. But usually this not a good practice to render lists in React. We can update the above code in which we have directly rendered the list to now a component that will accept an array as props and returns an unordered list.</p>
-          <div class="box-pre">
-              <pre><code>import React from 'react';
+        </div>
+        <p>The above code will render an unordered list.<br />We had directly rendered the list to the DOM. But usually this not a good practice to render lists in React. We can update the above code in which we have directly rendered the list to now a component that will accept an array as props and returns an unordered list.</p>
+        <div class="box-pre">
+          <pre><code>import React from 'react';
 import ReactDOM from 'react-dom';
   
 // Component that will return an
@@ -421,19 +428,19 @@ ReactDOM.render(
     &lt;Navmenu menuitems = {menuItems} /&gt;, 
     document.getElementById('root')
 );</pre></code>
-          </div>
-          <p>You can see in the above output that the unordered list is successfully rendered to the browser but a warning message is logged to the console:</p>
-          <div class="box-pre">
-              <pre><code>Warning: Each child in an array or iterator
+        </div>
+        <p>You can see in the above output that the unordered list is successfully rendered to the browser but a warning message is logged to the console:</p>
+        <div class="box-pre">
+          <pre><code>Warning: Each child in an array or iterator
          should have a unique "key" prop</pre></code>
-          </div>
-          <p>The above warning message says that each of the list items in our unordered list should have a unique <strong>key.</strong></p>
-          </br>
-          <p><strong>Keys</strong><br/>Keys allow React to keep track of elements. This way, if an item is updated or removed, only that item will be re-rendered instead of the entire list.
-They need to be unique to each sibling. But they can be duplicated globally.
-Generally, the key should be a unique ID assigned to each item. As a last resort, you can use the array index as a key.<br/>Below is the updated code with keys:</p>
-          <div class="box-pre">
-              <pre><code>import React from 'react';
+        </div>
+        <p>The above warning message says that each of the list items in our unordered list should have a unique <strong>key.</strong></p>
+        </br>
+        <p><strong>Keys</strong><br />Keys allow React to keep track of elements. This way, if an item is updated or removed, only that item will be re-rendered instead of the entire list.
+          They need to be unique to each sibling. But they can be duplicated globally.
+          Generally, the key should be a unique ID assigned to each item. As a last resort, you can use the array index as a key.<br />Below is the updated code with keys:</p>
+        <div class="box-pre">
+          <pre><code>import React from 'react';
 import ReactDOM from 'react-dom';
   
 // Component that will return an
@@ -461,28 +468,29 @@ ReactDOM.render(
     &lt;Navmenu menuitems = {menuItems} /&gt;, 
     document.getElementById('root')
 );</pre></code>
-          </div>
-          <p>This code will give the same output as that of the previous code but this time without any warning. Keys are used in React to identify which items in the list are changed, updated, or deleted. In other words, we can say that keys are used to give an identity to the elements in the lists.</p>
         </div>
-      </section>
+        <p>This code will give the same output as that of the previous code but this time without any warning. Keys are used in React to identify which items in the list are changed, updated, or deleted. In other words, we can say that keys are used to give an identity to the elements in the lists.</p>
+      </div>
+    </section>
 
-      <section class="main section" id="reference">
-        <header>Reference</header>
-        <div class="content">
-          <p>All the documentation in this page is taken from:</p>
-          <ul>
-            <li><a href="https://www.geeksforgeeks.org/reactjs-tutorials/">ReactJS Geeks for Geeks</a></li>
-            <li><a href="https://reactjs.org">ReactJS</a></li>
-            <li><a href="https://www.w3schools.com/REACT/default.asp">W3schools React</a></li>
-          </ul>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <p>
-        &copy; 2023 Roksana Cieśla &bull;
-        <a href="https://github.com/rogzan" target="_blank">Github</a>
-      </p>
-    </footer>
-  </body>
+    <section class="main_section" id="reference">
+      <header>Reference</header>
+      <div class="content">
+        <p>All the documentation in this page is taken from:</p>
+        <ul>
+          <li><a href="https://www.geeksforgeeks.org/reactjs-tutorials/">ReactJS Geeks for Geeks</a></li>
+          <li><a href="https://reactjs.org">ReactJS</a></li>
+          <li><a href="https://www.w3schools.com/REACT/default.asp">W3schools React</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>
+      &copy; 2023 Roksana Cieśla &bull;
+      <a href="https://github.com/rogzan" target="_blank">Github</a>
+    </p>
+  </footer>
+</body>
+
 </html>
